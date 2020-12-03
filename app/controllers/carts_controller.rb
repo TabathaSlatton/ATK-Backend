@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :update, :destroy]
+  skip_before_action :authorized, only: [:create, :index]
 
   # GET /carts
   def index
@@ -46,6 +47,6 @@ class CartsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def cart_params
-      params.require(:cart).permit(:user_id)
+      params.require(:cart).permit(:user_id, :completed)
     end
 end
