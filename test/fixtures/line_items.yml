@@ -2,6 +2,12 @@
 
 one:
   user: one
+  completed: false
+  product: one
+  quantity: 1
 
 two:
   user: two
+  completed: false
+  product: two
+  quantity: 1

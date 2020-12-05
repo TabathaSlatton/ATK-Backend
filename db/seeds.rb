@@ -16,13 +16,13 @@ Product.create(name: "Le Creuset Signature Enameled Cast Iron Round Dutch Oven",
 # Product.create(name: "", price: , quantity_in_stock: , img_url: "", category: "", description: "")
 
 @user = User.create(username: "test", password: "test", first_name: "Test", last_name: "Also-Test", email: "test@test.com")
-@cart = Cart.create(user_id: 1, completed: false)
 
-CartProduct.create(cart_id: 1, quantity: 1, product_id: 1)
-CartProduct.create(cart_id: 1, quantity: 4, product_id: 3)
-CartProduct.create(cart_id: 1, quantity: 3, product_id: 5)
+LineItem.create(user_id: 1, quantity: 1, product_id: 1, completed: false)
+LineItem.create(user_id: 1, quantity: 4, product_id: 3, completed: false)
+LineItem.create(user_id: 1, quantity: 3, product_id: 5, completed: false)
 
 
 # Product.all.each do |product|
 #     product.
 # end
+
